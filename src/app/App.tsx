@@ -1,19 +1,18 @@
 import { FC, useMemo } from "react";
 import { classNames } from "shared/classNames";
 import { useTheme } from "./providers/ThemeProvider";
-import { Link } from "react-router-dom";
 import { RouteProvider } from "./routes";
+import { NavBar } from "widgets/NavBar";
 import "./styles/index.scss";
 
 const App: FC = () => {
-    const { theme, toggleTheme } = useTheme();
-    const classes = useMemo(() => classNames("app", {}, [theme]), [theme]);
+    const { theme } = useTheme();
+    const classes = useMemo(() => classNames("app", [theme]), [theme]);
 
     return (
         <div className={classes}>
+            <NavBar />
             <RouteProvider />
-            <Link to="/">Home</Link>
-            <Link to="/about">About</Link>
         </div>
     );
 };

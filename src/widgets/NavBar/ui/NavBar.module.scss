@@ -1,0 +1,20 @@
+.NavBar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 20px;
+    background-color: var(--contrast-bg-color);
+}
+
+.Links {
+    display: flex;
+    align-items: center;
+
+    margin-right: 30px;
+}
+
+.Tools {
+    display: flex;
+    align-items: center;
+}
