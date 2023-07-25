@@ -18,7 +18,7 @@ export function buildConfig({
         module: {
             rules: buildLoaders(isDev),
         },
-        plugins: buildPlugins(paths),
+        plugins: buildPlugins(paths, isDev),
         resolve: buildResolvers(paths),
         output: {
             filename: "bundle.[contenthash].js",

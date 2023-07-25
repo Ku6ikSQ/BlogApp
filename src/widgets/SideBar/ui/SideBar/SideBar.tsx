@@ -1,11 +1,14 @@
 import { FC, useState } from "react";
 import { classNames } from "shared/classNames";
-import cls from "./SideBar.module.scss";
 import { Button } from "shared/ui/Button";
-import { ThemeSwitcher } from "shared/ui/ThemeSwitcher";
+import { useTranslation } from "react-i18next";
+import { ThemeSwitcher } from "widgets/ThemeSwitcher";
+import cls from "./SideBar.module.scss";
+import { LangSwitcher } from "widgets/LangSwitcher";
 
 export const SideBar: FC = () => {
     const [collapsed, setCollapsed] = useState<boolean>(true);
+    const { t } = useTranslation();
 
     const toggleCollapse = () => setCollapsed((prev) => !prev);
 
@@ -16,11 +19,12 @@ export const SideBar: FC = () => {
             })}
         >
             <Button contrast onClick={toggleCollapse}>
-                Collapse
+                {t(collapsed ? "expand" : "collapse")}
             </Button>
 
-            <div className="switchers">
-                <ThemeSwitcher className={cls.switcher} />
+            <div className={cls.switchers}>
+                <ThemeSwitcher className={cls.themeSwitcher} />
+                <LangSwitcher className={cls.langSwitcher} />
             </div>
         </div>
     );

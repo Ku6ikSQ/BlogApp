@@ -4,7 +4,7 @@
     align-items: center;
     justify-content: space-between;
 
-    padding: 0px 20px 10px;
+    padding: var(--standart-ident);
     max-width: var(--sidebar-width);
     width: 100%;
 
@@ -16,4 +16,26 @@
 
 .collapsed {
     max-width: var(--sidebar-collapsed-width);
+
+    .switchers {
+        flex-direction: column;
+        justify-content: center;
+
+        & > * {
+            margin-bottom: var(--small-ident);
+        }
+
+        & > *:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.switchers {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    max-width: calc(var(--sidebar-width) / 2);
+    width: 100%;
 }
