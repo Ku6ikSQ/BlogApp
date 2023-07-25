@@ -9,7 +9,8 @@
         "allowJs": true,
         "moduleResolution": "Node",
         "esModuleInterop": true,
-        "allowSyntheticDefaultImports": true
+        "allowSyntheticDefaultImports": true,
+        "forceConsistentCasingInFileNames": true
     },
 
     "ts-node": {

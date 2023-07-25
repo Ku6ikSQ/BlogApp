@@ -6,14 +6,23 @@ type ButtonTheme = "clear";
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
     theme?: ButtonTheme;
+    contrast?: boolean;
 }
 
 export const Button: FC<ButtonProps> = (props) => {
-    const { className, theme = "clear", children, ...otherProps } = props;
+    const {
+        className,
+        theme = "clear",
+        contrast,
+        children,
+        ...otherProps
+    } = props;
 
     return (
         <button
-            className={classNames(cls["Button"], [className, cls[theme]])}
+            className={classNames(cls["Button"], [className, cls[theme]], {
+                [cls.contrast]: contrast,
+            })}
             {...otherProps}
         >
             {children}

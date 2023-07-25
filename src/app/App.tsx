@@ -3,6 +3,7 @@ import { classNames } from "shared/classNames";
 import { useTheme } from "./providers/ThemeProvider";
 import { RouteProvider } from "./routes";
 import { NavBar } from "widgets/NavBar";
+import { SideBar } from "widgets/SideBar";
 import "./styles/index.scss";
 
 const App: FC = () => {
@@ -12,7 +13,10 @@ const App: FC = () => {
     return (
         <div className={classes}>
             <NavBar />
-            <RouteProvider />
+            <div className="layout">
+                <SideBar />
+                <RouteProvider />
+            </div>
         </div>
     );
 };

@@ -13,13 +13,9 @@ export const NavBar: FC<NavBarProps> = (props) => {
         <div className={classNames(cls["NavBar"])}>
             <div className="logo"></div>
 
-            <div className={cls["Tools"]}>
-                <div className={cls["Links"]}>
-                    <AppLink to="/">Home</AppLink>
-                    <AppLink to="/about">About</AppLink>
-                </div>
-
-                <ThemeSwitcher />
+            <div className={cls["Links"]}>
+                <AppLink to="/">Home</AppLink>
+                <AppLink to="/about">About</AppLink>
             </div>
         </div>
     );
