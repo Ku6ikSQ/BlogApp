@@ -14,7 +14,6 @@ export function buildConfig({
     const config: Configuration = {
         entry: paths.entry,
         mode: mode,
-        devtool: "inline-source-map",
         module: {
             rules: buildLoaders(isDev),
         },
@@ -25,7 +24,8 @@ export function buildConfig({
             path: paths.output,
             clean: true,
         },
-        devServer: buildServer(server),
+        devServer: isDev ? buildServer(server) : undefined,
+        devtool: isDev ? "inline-source-map" : undefined,
     };
 
     return config;
