@@ -1,4 +1,4 @@
-import { FC } from "react";
+import { type FC } from "react";
 import { classNames } from "shared/classNames";
 import { Button } from "shared/ui/Button";
 import { useTheme } from "app/providers/ThemeProvider";
@@ -7,7 +7,7 @@ import SwitcherIconDark from "app/assets/icons/theme-dark.svg";
 import cls from "./ThemeSwitcher.module.scss";
 
 interface ThemeSwitcherProps {
-    className?: string;
+    className?: string
 }
 
 export const ThemeSwitcher: FC<ThemeSwitcherProps> = (props) => {

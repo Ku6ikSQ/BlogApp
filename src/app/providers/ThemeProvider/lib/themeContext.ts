@@ -1,4 +1,4 @@
 import { createContext } from "react";
-import { ITheme } from "./types";
+import { type ITheme } from "./types";
 
 export const ThemeContext = createContext<ITheme>(undefined);

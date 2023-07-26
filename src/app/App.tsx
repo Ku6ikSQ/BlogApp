@@ -1,4 +1,4 @@
-import { FC, Suspense, useMemo } from "react";
+import { type FC, Suspense, useMemo } from "react";
 import { classNames } from "shared/classNames";
 import { useTheme } from "./providers/ThemeProvider";
 import { RouteProvider } from "./routes";

@@ -1,4 +1,4 @@
-import { RouteProps } from "react-router-dom";
+import { type RouteProps } from "react-router-dom";
 import { HomePage } from "pages/HomePage";
 import { AboutPage } from "pages/AboutPage";
 
@@ -11,10 +11,10 @@ type RoutePaths = Record<Routes, string>;
 
 const paths: RoutePaths = {
     [Routes.HOME]: "/",
-    [Routes.ABOUT]: "/about",
+    [Routes.ABOUT]: "/about"
 };
 
 export const routeConfig: RouteProps[] = [
     { path: paths[Routes.HOME], element: <HomePage /> },
-    { path: paths[Routes.ABOUT], element: <AboutPage /> },
+    { path: paths[Routes.ABOUT], element: <AboutPage /> }
 ];

@@ -1,4 +1,4 @@
-import { FC, useState } from "react";
+import { type FC, useState } from "react";
 import { classNames } from "shared/classNames";
 import { Button } from "shared/ui/Button";
 import { useTranslation } from "react-i18next";
@@ -10,7 +10,9 @@ export const SideBar: FC = () => {
     const [collapsed, setCollapsed] = useState<boolean>(true);
     const { t } = useTranslation();
 
-    const toggleCollapse = () => setCollapsed((prev) => !prev);
+    const toggleCollapse = (): void => {
+        setCollapsed((prev) => !prev);
+    };
 
     return (
         <div

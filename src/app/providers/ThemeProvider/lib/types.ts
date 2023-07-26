@@ -1,11 +1,11 @@
 export type Theme = "light" | "dark";
 
 export interface ITheme {
-    theme: Theme;
-    setTheme: (theme: Theme) => void;
+    theme: Theme
+    setTheme: (theme: Theme) => void
 }
 
 export interface IUseTheme {
-    theme: Theme;
-    toggleTheme: () => void;
+    theme: Theme
+    toggleTheme: () => void
 }

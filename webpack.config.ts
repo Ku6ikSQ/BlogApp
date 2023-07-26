@@ -1,5 +1,10 @@
-import { BuildMode, IDevServer, IPaths, buildConfig } from "./config/webpack";
-import { Configuration } from "webpack";
+import {
+    type BuildMode,
+    type IDevServer,
+    type IPaths,
+    buildConfig,
+} from "./config/webpack";
+import { type Configuration } from "webpack";
 import path from "path";
 
 interface IEnviroment {
@@ -7,7 +12,10 @@ interface IEnviroment {
     port?: number;
 }
 
-export default ({ mode = "development", port = 3000 }: IEnviroment) => {
+export default ({
+    mode = "development",
+    port = 3000,
+}: IEnviroment): Configuration => {
     const isDev = mode === "development";
 
     const paths: IPaths = {

@@ -1,6 +1,6 @@
-import { FC, PropsWithChildren, useState } from "react";
+import { type FC, type PropsWithChildren, useState } from "react";
 import { ThemeContext } from "../lib/themeContext";
-import { Theme } from "../lib/types";
+import { type Theme } from "../lib/types";
 import { getDefaultTheme } from "../lib/utils";
 
 export const ThemeProvider: FC<PropsWithChildren> = ({ children }) => {

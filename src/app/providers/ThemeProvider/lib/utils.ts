@@ -1,4 +1,4 @@
-import { Theme } from "./types";
+import { type Theme } from "./types";
 
 export const THEME_LS_KEY = "theme";
 
@@ -8,5 +8,6 @@ export const getDefaultTheme = (): Theme => {
     return lsTheme || "light";
 };
 
-export const saveTheme = (theme: Theme): void =>
+export const saveTheme = (theme: Theme): void => {
     localStorage.setItem(THEME_LS_KEY, theme);
+};

@@ -2,29 +2,29 @@ import HtmlWebpackPlugin from "html-webpack-plugin";
 import MiniCssExtractPlugin from "mini-css-extract-plugin";
 import ReactRefreshWebpackPlugin from "@pmmmwh/react-refresh-webpack-plugin";
 import {
-    WebpackPluginInstance,
+    type WebpackPluginInstance,
     ProgressPlugin,
     DefinePlugin,
-    HotModuleReplacementPlugin,
+    HotModuleReplacementPlugin
 } from "webpack";
-import { IPaths } from "./types";
+import { type IPaths } from "./types";
 
-export function buildPlugins(
+export function buildPlugins (
     { html }: IPaths,
     isDev: boolean
 ): WebpackPluginInstance[] {
     const plugins = [
         new HtmlWebpackPlugin({
-            template: html,
+            template: html
         }),
         new MiniCssExtractPlugin({
             filename: "css/[name]-[contenthash:8].css",
-            chunkFilename: "css/[name]-[contenthash:8].css",
+            chunkFilename: "css/[name]-[contenthash:8].css"
         }),
         new ProgressPlugin(),
         new DefinePlugin({
-            __IS_DEV__: isDev,
-        }),
+            __IS_DEV__: isDev
+        })
     ];
 
     if (isDev) {
