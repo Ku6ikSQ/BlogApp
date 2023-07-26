@@ -10,7 +10,8 @@
         "moduleResolution": "Node",
         "esModuleInterop": true,
         "allowSyntheticDefaultImports": true,
-        "forceConsistentCasingInFileNames": true
+        "forceConsistentCasingInFileNames": true,
+        "strictNullChecks": true
     },
 
     "ts-node": {
