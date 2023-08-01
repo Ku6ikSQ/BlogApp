@@ -1,4 +1,5 @@
 import { createContext } from "react";
 import { type ITheme } from "./types";
 
-export const ThemeContext = createContext<ITheme>(undefined);
+// eslint-disable-next-line @typescript-eslint/consistent-type-assertions
+export const ThemeContext = createContext<ITheme>({} as ITheme);

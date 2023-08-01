@@ -6,7 +6,8 @@
     "extends": [
         "standard-with-typescript",
         "plugin:react/recommended",
-        "plugin:react/jsx-runtime"
+        "plugin:react/jsx-runtime",
+        "plugin:i18next/recommended"
     ],
     "parser": "@typescript-eslint/parser",
     "parserOptions": {
@@ -17,7 +18,7 @@
         "sourceType": "module",
         "project": "tsconfig.json"
     },
-    "plugins": ["react", "@typescript-eslint"],
+    "plugins": ["react", "@typescript-eslint", "i18next"],
     "rules": {
         "@typescript-eslint/indent": [2, 4],
         "@typescript-eslint/semi": [0],
