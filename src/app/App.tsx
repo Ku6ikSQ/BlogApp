@@ -1,5 +1,5 @@
 import { type FC, Suspense, useMemo } from "react";
-import { classNames } from "shared/classNames";
+import { classNames } from "shared/libs/classNames";
 import { useTheme } from "./providers/ThemeProvider";
 import { RouteProvider } from "./routes";
 import { NavBar } from "widgets/NavBar";

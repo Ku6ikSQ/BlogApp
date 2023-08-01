@@ -1,5 +1,5 @@
 import { type ButtonHTMLAttributes, type FC } from "react";
-import { classNames } from "shared/classNames";
+import { classNames } from "shared/libs/classNames";
 import cls from "./Button.module.scss";
 
 type ButtonTheme = "clear";

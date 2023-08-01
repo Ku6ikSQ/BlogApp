@@ -1,5 +1,5 @@
 import { type FC, useState } from "react";
-import { classNames } from "shared/classNames";
+import { classNames } from "shared/libs/classNames";
 import { Button } from "shared/ui/Button";
 import { useTranslation } from "react-i18next";
 import { ThemeSwitcher } from "widgets/ThemeSwitcher";
