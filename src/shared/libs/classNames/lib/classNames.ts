@@ -12,7 +12,7 @@ export function classNames(
         ...additional.filter(Boolean),
         ...Object.entries(mods)
             .filter((e) => e[1])
-            .map((e) => (e[1] ? e[0] : "")),
+            .map((e) => e[0]),
     ];
 
     return classes.join(" ");
