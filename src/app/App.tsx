@@ -2,10 +2,9 @@ import { type FC, Suspense, useMemo } from "react";
 import { classNames } from "shared/libs/classNames";
 import { useTheme } from "./providers/ThemeProvider";
 import { RouteProvider } from "./routes";
-import { NavBar } from "widgets/NavBar";
-import { SideBar } from "widgets/SideBar";
-import "./styles/index.scss";
+import { Layout } from "./Layout";
 import "shared/i18n";
+import "./styles/index.scss";
 
 const App: FC = () => {
     const { theme } = useTheme();
@@ -14,11 +13,9 @@ const App: FC = () => {
     return (
         <div className={classes}>
             <Suspense>
-                <NavBar />
-                <div className="layout">
-                    <SideBar />
+                <Layout>
                     <RouteProvider />
-                </div>
+                </Layout>
             </Suspense>
         </div>
     );
