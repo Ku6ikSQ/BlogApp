@@ -3,5 +3,7 @@
     "expand": "Expand",
     "home": "Home",
     "about": "About",
-    "langBtn": "English"
+    "langBtn": "English",
+    "crashApp": "Something went wrong..",
+    "reloadApp": "Reload the website"
 }

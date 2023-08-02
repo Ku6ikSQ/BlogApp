@@ -1,4 +1,4 @@
-import { type FC, Suspense, useMemo } from "react";
+import { type FC, Suspense, useMemo, useEffect } from "react";
 import { classNames } from "shared/libs/classNames";
 import { useTheme } from "./providers/ThemeProvider";
 import { RouteProvider } from "./routes";
@@ -9,6 +9,10 @@ import "./styles/index.scss";
 const App: FC = () => {
     const { theme } = useTheme();
     const classes = useMemo(() => classNames("app", [theme]), [theme]);
+
+    useEffect(() => {
+        throw new Error("Fuck");
+    }, []);
 
     return (
         <div className={classes}>
