@@ -5,26 +5,28 @@ import {
     type WebpackPluginInstance,
     ProgressPlugin,
     DefinePlugin,
-    HotModuleReplacementPlugin
+    HotModuleReplacementPlugin,
 } from "webpack";
 import { type IPaths } from "./types";
+import { BundleAnalyzerPlugin } from "webpack-bundle-analyzer";
 
-export function buildPlugins (
+export function buildPlugins(
     { html }: IPaths,
     isDev: boolean
 ): WebpackPluginInstance[] {
     const plugins = [
         new HtmlWebpackPlugin({
-            template: html
+            template: html,
         }),
         new MiniCssExtractPlugin({
             filename: "css/[name]-[contenthash:8].css",
-            chunkFilename: "css/[name]-[contenthash:8].css"
+            chunkFilename: "css/[name]-[contenthash:8].css",
         }),
         new ProgressPlugin(),
         new DefinePlugin({
-            __IS_DEV__: isDev
-        })
+            __IS_DEV__: isDev,
+        }),
+        new BundleAnalyzerPlugin({ openAnalyzer: false }),
     ];
 
     if (isDev) {
