@@ -1,15 +1,10 @@
-import { render, screen } from "@testing-library/react";
+import { screen } from "@testing-library/react";
 import { SideBar } from "./SideBar";
-import { I18nextProvider } from "react-i18next";
-import i18n from "shared/i18n/lib/i18n-tests";
+import { renderWithI18n } from "shared/libs/tests/lib/renderWithI18n";
 
 describe("Testing the base functional", () => {
     test("Correct render", () => {
-        render(
-            <I18nextProvider i18n={i18n}>
-                <SideBar />
-            </I18nextProvider>
-        );
+        renderWithI18n(<SideBar />);
         const sidebar = screen.getByTestId("sidebar");
 
         expect(sidebar).toBeInTheDocument();
