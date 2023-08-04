@@ -16,11 +16,12 @@ export const SideBar: FC = () => {
 
     return (
         <div
+            data-testid="sidebar"
             className={classNames(cls["SideBar"], [], {
                 [cls.collapsed]: collapsed,
             })}
         >
-            <Button contrast onClick={toggleCollapse}>
+            <Button data-testid="sidebar-btn" contrast onClick={toggleCollapse}>
                 {t(collapsed ? "expand" : "collapse")}
             </Button>
 
