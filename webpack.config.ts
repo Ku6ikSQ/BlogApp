@@ -3,7 +3,7 @@ import {
     type IDevServer,
     type IPaths,
     buildConfig,
-} from "./config/webpack";
+} from "./configs/webpack";
 import { type Configuration } from "webpack";
 import path from "path";
 

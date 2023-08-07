@@ -3,8 +3,8 @@ import { classNames } from "shared/libs/classNames";
 import { Button } from "shared/ui/Button";
 import { useTranslation } from "react-i18next";
 import { ThemeSwitcher } from "widgets/ThemeSwitcher";
-import cls from "./SideBar.module.scss";
 import { LangSwitcher } from "widgets/LangSwitcher";
+import cls from "./SideBar.module.scss";
 
 export const SideBar: FC = () => {
     const [collapsed, setCollapsed] = useState<boolean>(true);

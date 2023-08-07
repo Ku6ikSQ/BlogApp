@@ -11,7 +11,7 @@ void i18n
         fallbackLng: "ru",
         debug: __IS_DEV__,
         interpolation: {
-            escapeValue: false, // not needed for react as it escapes by default
+            escapeValue: false,
         },
     });
 
