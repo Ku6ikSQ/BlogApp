@@ -1,24 +1,19 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { SideBar } from "./SideBar";
+import { PageError } from "./PageError";
 import { ThemeDecorator } from "shared/libs/storybook";
 
 const meta = {
-    title: "Widgets/SideBar",
-    component: SideBar,
+    title: "Widgets/PageError",
+    component: PageError,
     tags: ["autodocs"],
     parameters: {
         layout: "fullscreen",
     },
-} satisfies Meta<typeof SideBar>;
+} satisfies Meta<typeof PageError>;
 
 export default meta;
+
 type Story = StoryObj<typeof meta>;
 
-export const Light: Story = {
-    args: {},
-};
-
-export const Dark: Story = {
-    args: {},
-    decorators: [ThemeDecorator("dark")],
-};
+export const Light: Story = {};
+export const Dark: Story = { decorators: [ThemeDecorator("dark")] };

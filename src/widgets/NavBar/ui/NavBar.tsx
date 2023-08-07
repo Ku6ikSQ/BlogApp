@@ -12,8 +12,12 @@ export const NavBar: FC = () => {
             <div className="logo"></div>
 
             <div className={cls["Links"]}>
-                <AppLink to="/">{t("home")}</AppLink>
-                <AppLink to="/about">{t("about")}</AppLink>
+                <AppLink className={cls.contrast} to="/">
+                    {t("home")}
+                </AppLink>
+                <AppLink className={cls.contrast} to="/about">
+                    {t("about")}
+                </AppLink>
             </div>
         </div>
     );

@@ -22,13 +22,13 @@
     border-radius: 20%;
 }
 
-.app.dark {
+.dark {
     .lds-spinner div::after {
-        background: var(--secondary-color);
+        background: var(--secondary-color) !important;
     }
 }
 
-.app.light {
+.light {
     .lds-spinner div::after {
         background: var(--contrast-bg-color);
     }

@@ -3,6 +3,7 @@ import {
     StyleDecorator,
     I18nDecorator,
     ThemeDecorator,
+    RouteDecorator,
 } from "shared/libs/storybook";
 
 const preview: Preview = {
@@ -15,7 +16,12 @@ const preview: Preview = {
             },
         },
     },
-    decorators: [StyleDecorator, I18nDecorator, ThemeDecorator("light")],
+    decorators: [
+        StyleDecorator,
+        ThemeDecorator("light"),
+        I18nDecorator,
+        RouteDecorator,
+    ],
 };
 
 export default preview;

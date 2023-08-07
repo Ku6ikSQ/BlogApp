@@ -1,24 +1,22 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { SideBar } from "./SideBar";
+import { NotFoundPage } from "./NotFoundPage";
 import { ThemeDecorator } from "shared/libs/storybook";
 
 const meta = {
-    title: "Widgets/SideBar",
-    component: SideBar,
+    title: "Pages/NotFoundPage",
+    component: NotFoundPage,
     tags: ["autodocs"],
     parameters: {
         layout: "fullscreen",
     },
-} satisfies Meta<typeof SideBar>;
+    args: {},
+    argTypes: {},
+} satisfies Meta<typeof NotFoundPage>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const Light: Story = {
-    args: {},
-};
-
+export const Light: Story = {};
 export const Dark: Story = {
-    args: {},
     decorators: [ThemeDecorator("dark")],
 };

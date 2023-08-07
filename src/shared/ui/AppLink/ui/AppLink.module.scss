@@ -1,5 +1,5 @@
 .AppLink {
-    color: var(--contrast-primary-color);
+    color: var(--primary-color);
     text-decoration: none;
 
     margin-right: 20px;
@@ -7,4 +7,8 @@
     &:last-child {
         margin-right: 0;
     }
+}
+
+.dark.AppLink {
+    color: var(--contrast-primary-color);
 }
