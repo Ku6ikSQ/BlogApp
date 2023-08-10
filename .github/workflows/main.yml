@@ -10,12 +10,12 @@ jobs:
         with:
           node-version: '14'
       - name: node modules installing
-      - run: npm i
+        run: npm i
       - name: building the project (prod. mode)
-      - run: npm run build:prod
+        run: npm run build:prod
       - name: linting typescript (ts-lint)
-      - run: npm run lint:ts
+        run: npm run lint:ts
       - name: linting styles (style-lint)
-      - run: npm run lint:scss
+        run: npm run lint:scss
       - name: unit-testing
-      - run: npm run test:unit
+        run: npm run test:unit
