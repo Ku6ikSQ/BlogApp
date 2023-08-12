@@ -12,9 +12,9 @@
     "lint:scss": "npx stylelint \"**/*.scss\"",
     "lint:scss:fix": "npx stylelint \"**/*.scss\" --fix",
     "test:unit": "jest",
+    "test:ui": "npx chromatic --project-token=chpt_6c17fd1a4df3e3c --build-script-name storybook:build",
     "storybook": "storybook dev -p 6006 -s ../../public -c ./configs/storybook",
-    "storybook:build": "storybook build -c ./configs/storybook",
-    "chromatic": "npx chromatic --project-token=chpt_6c17fd1a4df3e3c --build-script-name storybook:build"
+    "storybook:build": "storybook build -c ./configs/storybook"
   },
   "keywords": [],
   "author": "",

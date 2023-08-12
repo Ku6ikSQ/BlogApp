@@ -21,7 +21,12 @@ export const SideBar: FC = () => {
                 [cls.collapsed]: collapsed,
             })}
         >
-            <Button data-testid="sidebar-btn" contrast onClick={toggleCollapse}>
+            <Button
+                noFilter
+                contrast
+                data-testid="sidebar-btn"
+                onClick={toggleCollapse}
+            >
                 {t(collapsed ? "expand" : "collapse")}
             </Button>
 

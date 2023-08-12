@@ -1,4 +1,10 @@
 .ThemeSwitcher {
-    width: 30px;
-    height: 30px;
+    &:hover {
+        filter: brightness(0.8);
+    }
+
+    & > svg {
+        width: 30px;
+        height: 30px;
+    }
 }

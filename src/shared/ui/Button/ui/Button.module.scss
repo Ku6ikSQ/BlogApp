@@ -1,17 +1,46 @@
 .Button {
     margin: 0;
-    padding: 0;
-    outline: none;
+
+    background-color: transparent;
+    transition: all 0.2s linear;
 
     cursor: pointer;
+
+    border-radius: var(--border-radius-d);
+
+    border: 0;
+    outline: none;
 }
 
 .clear {
     color: var(--primary-color);
-    border: 0;
-    background-color: transparent;
+
+    &:hover {
+        filter: brightness(0.5);
+    }
+}
+
+.outlined {
+    color: var(--primary-color);
+
+    padding: 10px 20px;
+
+    border: 1px var(--primary-color) solid;
+
+    &:hover {
+        color: var(--contrast-primary-color);
+        background: var(--contrast-bg-color);
+
+        border: 1px transparent solid;
+    }
 }
 
 .contrast {
     color: var(--contrast-primary-color);
+}
+
+.noFilter {
+    &:hover {
+        filter: none;
+    }
 }

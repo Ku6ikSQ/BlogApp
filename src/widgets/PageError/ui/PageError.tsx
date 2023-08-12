@@ -1,6 +1,7 @@
 import { type FC } from "react";
 import { classNames } from "shared/libs/classNames";
 import { useTranslation } from "react-i18next";
+import { Button } from "shared/ui/Button";
 import cls from "./PageError.module.scss";
 
 export const PageError: FC = () => {
@@ -9,9 +10,9 @@ export const PageError: FC = () => {
     return (
         <div className={classNames(cls["PageError"])}>
             <h4>{t("crashApp")}</h4>
-            <button type="button" onClick={location.reload}>
+            <Button theme="outlined" onClick={location.reload}>
                 {t("reloadApp")}
-            </button>
+            </Button>
         </div>
     );
 };

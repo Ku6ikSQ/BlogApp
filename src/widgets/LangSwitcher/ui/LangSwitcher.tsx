@@ -17,6 +17,7 @@ export const LangSwitcher: FC<LangSwitcherProps> = (props) => {
     return (
         <Button
             contrast
+            noFilter
             onClick={toggleLanguage}
             className={classNames("", [className])}
         >
