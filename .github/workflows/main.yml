@@ -1,5 +1,5 @@
 name: CI Pipeline
-run-name: ${{ github.actor }} is learning GitHub Actions
+run-name: ${{ github.actor }} is testing app
 on: [push]
 jobs:
     main:
