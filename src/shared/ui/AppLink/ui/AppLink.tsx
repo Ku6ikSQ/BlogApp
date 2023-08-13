@@ -5,15 +5,18 @@ import cls from "./AppLink.module.scss";
 
 interface AppLinkProps extends LinkProps {
     className?: string;
+    contrast?: boolean;
 }
 
 export const AppLink: FC<PropsWithChildren<AppLinkProps>> = (props) => {
-    const { className, to, children, ...otherProps } = props;
+    const { className, to, contrast, children, ...otherProps } = props;
 
     return (
         <Link
             to={to}
-            className={classNames(cls["AppLink"], [className])}
+            className={classNames(cls["AppLink"], [className], {
+                [cls.contrast]: !!contrast,
+            })}
             {...otherProps}
         >
             {children}

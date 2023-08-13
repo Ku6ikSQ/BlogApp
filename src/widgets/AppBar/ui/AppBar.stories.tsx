@@ -1,15 +1,15 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { NavBar } from "./NavBar";
+import { AppBar } from "./AppBar";
 import { ThemeDecorator } from "shared/libs/storybook";
 
 const meta = {
-    title: "Widgets/NavBar",
-    component: NavBar,
+    title: "Widgets/AppBar",
+    component: AppBar,
     tags: ["autodocs"],
     parameters: {
         layout: "fullscreen",
     },
-} satisfies Meta<typeof NavBar>;
+} satisfies Meta<typeof AppBar>;
 
 export default meta;
 

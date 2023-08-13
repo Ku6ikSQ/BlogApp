@@ -2,9 +2,12 @@ import { type FC, useState } from "react";
 import { classNames } from "shared/libs/classNames";
 import { Button } from "shared/ui/Button";
 import { useTranslation } from "react-i18next";
-import { ThemeSwitcher } from "widgets/ThemeSwitcher";
-import { LangSwitcher } from "widgets/LangSwitcher";
 import cls from "./SideBar.module.scss";
+import { paths } from "shared/route";
+import { NavLink } from "shared/ui/NavLink";
+import HomeIcon from "app/assets/icons/HomeIcon.svg";
+import AboutIcon from "app/assets/icons/AboutIcon.svg";
+import BurgerIcon from "app/assets/icons/BurgerIcon.svg";
 
 export const SideBar: FC = () => {
     const [collapsed, setCollapsed] = useState<boolean>(true);
@@ -27,12 +30,20 @@ export const SideBar: FC = () => {
                 data-testid="sidebar-btn"
                 onClick={toggleCollapse}
             >
-                {t(collapsed ? "expand" : "collapse")}
+                <BurgerIcon className={cls.burger} />
             </Button>
 
-            <div className={cls.switchers}>
-                <ThemeSwitcher className={cls.themeSwitcher} />
-                <LangSwitcher className={cls.langSwitcher} />
+            <div className={cls["links"]}>
+                <NavLink collapsed={collapsed} Icon={HomeIcon} to={paths.home}>
+                    {t("home")}
+                </NavLink>
+                <NavLink
+                    collapsed={collapsed}
+                    Icon={AboutIcon}
+                    to={paths.about}
+                >
+                    {t("about")}
+                </NavLink>
             </div>
         </div>
     );

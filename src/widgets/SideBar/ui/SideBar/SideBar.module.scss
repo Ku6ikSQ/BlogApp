@@ -1,41 +1,30 @@
 .SideBar {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
 
     padding: var(--standart-ident);
     max-width: var(--sidebar-width);
     width: 100%;
 
     background-color: var(--contrast-bg-color);
-    height: calc(100vh - var(--navbar-height));
+    height: calc(100vh - var(--appbar-height));
 
     transition: max-width 0.3s;
 }
 
-.switchers {
+.links {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    flex-direction: column;
 
-    max-width: calc(var(--sidebar-width) / 2);
-    width: 100%;
+    margin-top: var(--standart-ident);
 }
 
 .collapsed {
+    align-items: center;
+
     max-width: var(--sidebar-collapsed-width);
+}
 
-    .switchers {
-        flex-direction: column;
-        justify-content: center;
-
-        & > * {
-            margin-bottom: var(--small-ident);
-        }
-
-        & > *:last-child {
-            margin-bottom: 0;
-        }
-    }
+.burger {
+    fill: var(--contrast-primary-color);
 }

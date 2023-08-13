@@ -1,16 +1,21 @@
-.NavBar {
+.AppBar {
     display: flex;
     align-items: center;
     justify-content: space-between;
 
-    height: var(--navbar-height);
+    height: var(--appbar-height);
     padding: 0 20px;
 
     background-color: var(--contrast-bg-color);
 }
 
-.Links {
+.switchers {
     display: flex;
+    align-items: center;
+}
+
+.langSwitcher {
+    margin-right: var(--standart-ident);
 }
 
 .contrast {

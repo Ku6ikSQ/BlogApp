@@ -1,0 +1,18 @@
+.NavLink {
+    display: flex;
+    align-items: center;
+
+    svg {
+        fill: var(--contrast-primary-color);
+    }
+
+    margin-bottom: var(--small-ident);
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.ident {
+    margin-left: var(--small-ident);
+}
