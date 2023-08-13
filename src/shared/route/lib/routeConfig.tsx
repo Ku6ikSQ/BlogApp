@@ -11,7 +11,7 @@ enum Routes {
 
 type RoutePaths = Record<Routes, string>;
 
-const paths: RoutePaths = {
+export const paths: RoutePaths = {
     [Routes.HOME]: "/",
     [Routes.ABOUT]: "/about",
     [Routes.NOT_FOUND]: "*",

@@ -1,1 +1,1 @@
-export { routeConfig } from "./lib/routeConfig";
+export { routeConfig, paths } from "./lib/routeConfig";

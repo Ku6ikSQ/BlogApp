@@ -9,7 +9,9 @@ export const NavBar: FC = () => {
 
     return (
         <div className={classNames(cls["NavBar"])}>
-            <div className="logo"></div>
+            <div className="logo">
+                <h4>{"BlogApp"}</h4>
+            </div>
 
             <div className={cls["Links"]}>
                 <AppLink className={cls.contrast} to="/">
