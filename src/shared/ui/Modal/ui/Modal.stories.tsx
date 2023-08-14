@@ -21,15 +21,15 @@ type Story = StoryObj<typeof meta>;
 export const Light: Story = {
     args: {
         isOpen: true,
-        onClose: () => {
-            console.log(1);
-        },
+        noPortal: true,
+        onClose: () => {},
     },
 };
 
 export const Dark: Story = {
     args: {
         isOpen: true,
+        noPortal: true,
         onClose: () => {},
     },
     decorators: [ThemeDecorator("dark")],
