@@ -11,7 +11,7 @@ const App: FC = () => {
     const classes = useMemo(() => classNames("app", [theme]), [theme]);
 
     return (
-        <div className={classes}>
+        <div className={classes} id="app">
             <Suspense>
                 <Layout>
                     <RouteProvider />
