@@ -5,11 +5,13 @@ import { Portal } from "shared/libs/Portal";
 
 interface ModalProps extends PropsWithChildren {
     className?: string;
+    noPortal?: boolean;
     isOpen: boolean;
     onClose: () => void;
 }
 export const Modal: FC<ModalProps> = (props) => {
-    const { className, isOpen, onClose, children } = props;
+    const { className, isOpen, onClose, noPortal, children, ...otherProps } =
+        props;
 
     const stopOnClose = (e: MouseEvent): void => {
         e.stopPropagation();
@@ -29,22 +31,31 @@ export const Modal: FC<ModalProps> = (props) => {
         };
     }, []);
 
+    const ModalComponent: JSX.Element = (
+        <div
+            data-testid="overlay"
+            onClick={onClose}
+            className={classNames(cls["Overlay"], [className], {
+                [cls.isOpen]: isOpen,
+            })}
+        >
+            <div
+                data-testid="modal"
+                onClick={stopOnClose as any}
+                className={classNames(cls["Modal"], [])}
+                {...otherProps}
+            >
+                {/* <div className="head"></div> */}
+                <div className="content">{children}</div>
+            </div>
+        </div>
+    );
+
+    if (noPortal) return ModalComponent;
+
     return (
         <Portal container={document.getElementById("app") as HTMLElement}>
-            <div
-                onClick={onClose}
-                className={classNames(cls["Overlay"], [className], {
-                    [cls.isOpen]: isOpen,
-                })}
-            >
-                <div
-                    onClick={stopOnClose as any}
-                    className={classNames(cls["Modal"], [])}
-                >
-                    {/* <div className="head"></div> */}
-                    <div className="content">{children}</div>
-                </div>
-            </div>
+            {ModalComponent}
         </Portal>
     );
 };
