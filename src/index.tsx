@@ -9,13 +9,13 @@ import { BrowserRouter } from "react-router-dom";
 render(
     <StrictMode>
         <ErrorBoundary>
-            <StoreProvider>
-                <BrowserRouter>
+            <BrowserRouter>
+                <StoreProvider>
                     <ThemeProvider>
                         <App />
                     </ThemeProvider>
-                </BrowserRouter>
-            </StoreProvider>
+                </StoreProvider>
+            </BrowserRouter>
         </ErrorBoundary>
     </StrictMode>,
     document.getElementById("root")
