@@ -1,6 +1,6 @@
 import { configureStore } from "@reduxjs/toolkit";
 import type { IState } from "./types";
-import { counterReducer } from "entities/slices/counter";
+import { counterReducer } from "entity/slices/counter";
 
 export const createStore = (
     initialState: IState = { counter: { value: 0 } }

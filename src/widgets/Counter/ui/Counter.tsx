@@ -1,5 +1,5 @@
 import { useAppSelector } from "app/providers/StoreProvider/lib/hooks/useAppSelector";
-import { counterActions, getCounter } from "entities/slices/counter";
+import { counterActions, getCounter } from "entity/slices/counter";
 import type { FC } from "react";
 import { useDispatch } from "react-redux";
 import { Button } from "shared/ui/Button";
