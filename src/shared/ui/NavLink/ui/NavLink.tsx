@@ -15,13 +15,13 @@ export const NavLink: FC<NavLinkProps> = (props) => {
     const { className, Icon, to, collapsed, children } = props;
 
     return (
-        <div className={classNames(cls.NavLink, [className])}>
+        <AppLink
+            to={to}
+            contrast
+            className={classNames(cls.NavLink, [className])}
+        >
             {!!Icon && <Icon />}
-            {!collapsed && (
-                <AppLink className={cls.ident} to={to} contrast>
-                    {children}
-                </AppLink>
-            )}
-        </div>
+            {!collapsed && <div className={cls.ident}>{children}</div>}
+        </AppLink>
     );
 };

@@ -5,7 +5,7 @@ import {
     type ErrorInfo,
     type ReactNode,
 } from "react";
-import { PageError } from "widgets/PageError";
+import { PageError } from "pages/PageError";
 
 interface ErrorBoundaryProps extends PropsWithChildren {}
 interface ErrorBoundaryState {

@@ -1,7 +1,7 @@
 import { type FC, Suspense } from "react";
 import { Route, Routes } from "react-router-dom";
 import { routeConfig } from "shared/route";
-import { PageLoader } from "widgets/PageLoader";
+import { PageLoader } from "shared/ui/PageLoader";
 
 export const RouteProvider: FC = () => {
     return (
